@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Nguyễn Đăng Khôi-BT-JS_Buoi5-BC32E</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="alert alert-warning">
+        <h3 class="text-center"> BT1: TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
+        </div>
+        <div class="alert alert-primary">
+            <p>Công thức sử dụng : Thu nhập chịu thuế = Tổng thu nhập năm - 4tr- Số người phụ thuộc * 1.6tr</p>
+        </div>
+        <div class="form-group row">
+            <input type="text" class="form-control col-3 mt-3 ml-3" id="nhapTen" placeholder="Nhập tên người dùng">
+            <input type="number" class="form-control col-3 mt-3 ml-3" id="thuNhap" placeholder="Nhập tổng thu nhập năm">
+            <input type="number" class="form-control col-3 mt-3 ml-3" id="nguoiPhuThuoc" placeholder="Nhập số người phụ thuộc">
+        </div>
+        <button class="btn btn-danger" id="btnTienThue">Tính tiền thuế</button>
+        <div class="alert alert-danger mt-3 " id="ketQua_b1"></div>
+        <hr>
+        <!-- BÀI TẬP 2 -->
+        <div class="alert alert-warning text-center">
+        <h3>BT2: TÍNH TIỀN CÁP</h3>
+        </div>
+        <div class="alert alert-primary">
+            <p>
+                Nhà dân: <br>
+                • Phí xử lý hóa đơn: 4.5$ <br>
+                • Phí dịch vụ cơ bản: 20.5$ <br>
+                • Thuê kênh cao cấp: 7.5$ / kênh <br>
+        
+            </p>
+            <p>
+                Doanh nghiệp <br>
+                • Phí xử lý hóa đơn: 15$ <br>
+                • Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu, mỗi kết nối thêm 5$ / kết nối <br>
+                • Thuê kênh cao cấp: 50$ / kênh <br>
+            </p>
+        </div>
+        <div class="form-group row mr-3 mb-5 ">
+            <select class="form-control w-25 ml-3 mr-3 " id="loaiKH" onchange="hiden_soketnoi()">
+                <option value="chuaChon">Chọn loại khách hàng</option>
+                <option value="nhaDan">Nhà dân</option>
+                <option value="doanhNghiep">Doanh nghiệp</option>
+            </select>
+            <div class="form-group row mr-3">
+                <input type="text" class="form-control col-6 ml-3 mb-3" id="maKH" placeholder="Nhập mã khách hàng">
+                <input type="number" class="form-control col-6 ml-3 mb-3" id="soKenh" placeholder="Số kênh cao câp">
+                <input type="number" class="form-control col-6 ml-3 mb-3" id="soKetNoi" placeholder="Số kênh kết nối" style="display:none" >
+            </div>
+        </div>
+        <button class="btn btn-danger" id="btnTienCap">Tính tiền cáp</button>
+        <div class="alert alert-danger mt-3" id="ketQua_b2"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
